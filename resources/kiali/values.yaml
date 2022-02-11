@@ -102,7 +102,7 @@ deployment:
   hpa:
     api_version: "autoscaling/v2beta2"
     spec: {}
-  image_pull_policy: "Always"
+  image_pull_policy: "IfNotPresent" #"Always" -- I078212
   image_pull_secrets: []
   ingress:
     additional_labels: {}
