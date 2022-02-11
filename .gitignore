@@ -70,3 +70,6 @@ installation/versions-overrides.env
 
 # direnv files
 .envrc
+
+# I078212
+1.24.*/

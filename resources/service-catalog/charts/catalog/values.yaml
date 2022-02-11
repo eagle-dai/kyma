@@ -5,7 +5,7 @@
 imagePullSecrets: []
 # imagePullPolicy for the service-catalog; valid values are "IfNotPresent",
 # "Never", and "Always"
-imagePullPolicy: Always
+imagePullPolicy: IfNotPresent #Always -- I078212
 ## If true, create & use RBAC resources
 ##
 rbacEnable: true

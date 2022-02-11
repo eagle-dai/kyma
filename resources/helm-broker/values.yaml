@@ -81,7 +81,7 @@ global:
   isDevelopMode: false
   # image pull policy for helm broker broker/controller containers
   image:
-    pullPolicy: Always
+    pullPolicy: IfNotPresent # Always -- I078212
   # etcd port uses by helm broker
   etcdClientPort: 2379
 
