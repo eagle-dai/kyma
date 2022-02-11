@@ -30,7 +30,7 @@ spec:
         - name: {{ template "chart.name" . }}
           image: {{ .Values.image.repository }}/mockserver:mockserver-{{- if .Values.image.snapshot }}snapshot{{- else }}{{ .Chart.Version }}{{- end }}
 {{- if .Values.image.snapshot }}
-          imagePullPolicy: Always
+          imagePullPolicy: IfNotPresent #Always -- I078212
 {{- else }}
           imagePullPolicy: {{ .Values.image.pullPolicy }}
 {{- end }}

@@ -47,7 +47,7 @@ spec:
         env:
           - name: PROXY_TARGET_URL
             value: "https://localhost:8444/"
-        imagePullPolicy: Always
+        imagePullPolicy: IfNotPresent #Always -- I078212
         livenessProbe:
           failureThreshold: 3
           httpGet:
