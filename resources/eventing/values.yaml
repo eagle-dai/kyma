@@ -1,7 +1,7 @@
 # globally shared values among Helm subcharts
 global:
   containerRegistry:
-    path: eu.gcr.io/kyma-project
+    path: docker.io/eagledai # I078212
   images:
     eventing_controller:
       name: eventing-controller
@@ -13,7 +13,7 @@ global:
     nats:
       name: nats
       version: 2.6.5-alpine
-      directory: external
+      # directory: eagledai # I078212
   features:
     enableJetStream: false
 

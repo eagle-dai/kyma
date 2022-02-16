@@ -102,32 +102,32 @@ additionalPrometheusRulesMap: {}
 global:
   domainName: "kyma.example.com"
   containerRegistry:
-    path: eu.gcr.io/kyma-project
+    path: docker.io/eagledai # I078212
   images:
     prometheus_operator:
       name: "prometheus-operator"
       version: v0.53.1
-      directory: "external/quay.io/prometheus-operator"
+      # directory: "external/quay.io/prometheus-operator" # I078212
       sha: ""
     prometheus_config_reloader:
       name: "prometheus-config-reloader"
       version: "v0.53.1"
-      directory: "external/quay.io/prometheus-operator"
+      # directory: "external/quay.io/prometheus-operator" # I078212
       sha: ""
     configmap_reload:
       name: "configmap-reload"
       version: "v0.5.0"
-      directory: "external/jimmidyson"
+      # directory: "external/jimmidyson" # I078212
       sha: ""
     alertmanager:
       name: "alertmanager"
       version: v0.23.0
-      directory: "external/quay.io/prometheus"
+      # directory: "external/quay.io/prometheus" # I078212
       sha: ""
     prometheus:
       name: "prometheus"
       version: "v2.32.1"
-      directory: "external/quay.io/prometheus"
+      # directory: "external/quay.io/prometheus" # I078212
       sha: ""
     pushgateway:
       name: "pushgateway"
@@ -136,30 +136,30 @@ global:
     node_exporter:
       name: "node-exporter"
       version: "1.3.1-121599df"
-      directory: "tpi"
+      # directory: "tpi" # I078212
     kube_state_metrics:
       name: "kube-state-metrics"
       version: v2.3.0
-      directory: "external/k8s.gcr.io/kube-state-metrics"
+      # directory: "external/k8s.gcr.io/kube-state-metrics" # I078212
     grafana:
       name: "grafana"
       version: "7.5.13-eb28d2e0"
-      directory: "tpi"
+      # directory: "tpi" # I078212
       sha: ""
     busybox:
       name: "busybox"
       version: "1.34.1"
-      directory: "external"
+      #directory: "external" # I078212
       sha: ""
     k8s_sidecar:
       name: "k8s-sidecar"
       version: "1.15.0-2696e5d5"
-      directory: "tpi"
+      # directory: "tpi" # I078212
       sha: ""
     oauth2_proxy:
       name: "oauth2-proxy"
       version: "7.2.1-334ca95f"
-      directory: "tpi"
+      # directory: "eagledai" # I078212
       sha: ""
 
   istio:

@@ -11,20 +11,20 @@ global:
   priorityClassValue: 2000000
   highPriorityClassValue: 2100000
   containerRegistry:
-    path: eu.gcr.io/kyma-project
+    path: docker.io/eagledai # I078212
   images:
     k8s_tools:
       name: "k8s-tools"
       version: "20220127-ec72a890"
-      directory: "tpi"
+      # directory: "tpi"
     podpreset_webhook:
       name: "podpreset-webhook"
       version: "236ada79"
-      directory: "incubator"
+      # directory: "incubator" # I078212
     podpreset_controller:
       name: "podpreset-controller"
       version: "236ada79"
-      directory: "incubator"
+      # directory: "incubator"
 
 image:
   pullPolicy: IfNotPresent

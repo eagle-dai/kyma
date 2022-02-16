@@ -22,16 +22,16 @@ loki:
 
 global:
   containerRegistry:
-    path: eu.gcr.io/kyma-project
+    path: docker.io # I078212
   images:
     fluent_bit:
       name: fluent-bit
       version: 1.8.12-780c4842
-      directory: tpi
+      directory: eagledai # I078212
     loki:
       name: loki
       version: 2.2.1-2696e5d5
-      directory: tpi
+      directory: eagledai # I078212
   kymaRuntime:
     adminGroup: runtimeAdmin
     operatorGroup: runtimeOperator

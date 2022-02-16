@@ -5,16 +5,16 @@ global:
       name: kyma-gateway
       namespace: kyma-system
   containerRegistry:
-    path: eu.gcr.io/kyma-project
+    path: docker.io/eagledai # I078212
   images:
     minio:
       name: "minio"
       version: "RELEASE.2021-04-22T15-44-28Z-ef93efcf"
-      directory: "tpi/minio"
+      # directory: "tpi/minio" # I078212
     k8s_tools:
       name: "k8s-tools"
       version: "20220127-ec72a890"
-      directory: "tpi"
+      # directory: "tpi"
     rafter_controller_manager:
       name: "rafter-controller-manager"
       version: "f8031ac4"

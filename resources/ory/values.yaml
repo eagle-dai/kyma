@@ -26,12 +26,12 @@ global:
         # dbName: "db4hydra"
         # dbType: "postgres | mysql | cockroach"
   containerRegistry:
-    path: eu.gcr.io/kyma-project
+    path: docker.io/eagledai # I078212
   images:
     k8s_tools:
       name: "k8s-tools"
       version: "20220127-ec72a890"
-      directory: "tpi"
+      # directory: "tpi"
     ## Google Cloud SQL Proxy image
     ## ref: https://cloud.google.com/sql/docs/mysql/sql-proxy
     ## ref: https://cloud.google.com/sql/docs/postgres/sql-proxy
@@ -42,27 +42,27 @@ global:
     hydra:
       name: "hydra"
       version: "v1.10.7-sqlite"
-      directory: "external/oryd"
+      # directory: "external/oryd" # I078212
     hydra_maester:
       name: "hydra-maester"
       version: "v0.0.24"
-      directory: "external/oryd"
+      # directory: "external/oryd" # I078212
     busybox:
       name: "busybox"
       version: "1.34.1"
-      directory: "external"
+      #directory: "external" # I078212
     oathkeeper:
       name: "oathkeeper"
       version: "v0.38.15-alpine"
-      directory: "external/oryd"
+      # directory: "external/oryd" # I078212
     oathkeeper_maester:
       name: "oathkeeper-maester"
       version: "v0.1.5"
-      directory: "external/oryd"
+      # directory: "external/oryd" # I078212
     postgres:
       name: "postgres"
       version: "11.14-alpine-v1"
-      directory: "external"
+      directory: "" # I078212
     postgres_exporter:
       name: "postgres-exporter"
       version: "0.8.0-debian-10-r28"
