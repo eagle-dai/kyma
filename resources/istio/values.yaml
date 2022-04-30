@@ -121,7 +121,8 @@ monitoring:
 
 global:
   containerRegistry:
-    path: eu.gcr.io/kyma-project
+    # path: eu.gcr.io/kyma-project
+    path: docker.io/eagledai
   images:
     # these definitions aren't used by the chart, but they are required by external tool for list generation
     istio_proxyv2:
@@ -133,7 +134,7 @@ global:
     istio_pilot:
       name: "pilot"
       version: "1.12.3-solo-fips-distroless"
-      directory: "external/us-docker.pkg.dev/gloo-mesh/istio-69e5957db6d2"
-      containerRegistryPath: "eu.gcr.io/kyma-project"
+      # directory: "external/us-docker.pkg.dev/gloo-mesh/istio-69e5957db6d2"
+      # containerRegistryPath: "eu.gcr.io/kyma-project"
   tracing:
     enabled: true
