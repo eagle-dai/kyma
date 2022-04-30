@@ -107,7 +107,7 @@ global:
     prometheus_operator:
       name: "prometheus-operator"
       version: v0.53.1
-      directory: "external/quay.io/prometheus-operator"
+      # directory: "external/quay.io/prometheus-operator"
       sha: ""
     prometheus_config_reloader:
       name: "prometheus-config-reloader"
@@ -117,7 +117,7 @@ global:
     configmap_reload:
       name: "configmap-reload"
       version: "v0.5.0"
-      directory: "external/jimmidyson"
+      # directory: "external/jimmidyson"
       sha: ""
     alertmanager:
       name: "alertmanager"

@@ -104,6 +104,7 @@ global:
   tracing:
     enabled: true
   containerRegistry:
+    # path: eu.gcr.io/kyma-project
     path: docker.io/eagledai
   images:
     jaeger_operator:
