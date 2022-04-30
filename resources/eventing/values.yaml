@@ -1,21 +1,28 @@
 # globally shared values among Helm subcharts
 global:
   containerRegistry:
-    path: docker.io/eagledai # I078212
+    path: eu.gcr.io/kyma-project
   images:
     eventing_controller:
       name: eventing-controller
-      version: PR-13351
+      version: c6231aa9
       pullPolicy: "IfNotPresent"
     publisher_proxy:
       name: event-publisher-proxy
-      version: PR-13002
+      version: c6231aa9
     nats:
       name: nats
-      version: 2.6.5-alpine
-      # directory: eagledai # I078212
-  features:
-    enableJetStream: false
+      version: 2.7.4-alpine-2022-04-05
+      directory: external
+    nats_config_reloader:
+      name: natsio/nats-server-config-reloader
+      version: 0.6.3
+      directory: external
+
+  jetstream:
+    enabled: false
+    # Storage type of the stream, memory or file.
+    storage: memory
 
   # secretName defines optionally another name than the default secret name
   secretName: ""

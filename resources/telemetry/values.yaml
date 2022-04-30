@@ -1,18 +1,18 @@
 global:
   containerRegistry:
-    path: docker.io/eagledai # I078212
+    path: eu.gcr.io/kyma-project
   images:
     telemetry_operator:
       name: "telemetry-operator"
-      version: "PR-13331"
+      version: "35ab62e8"
     fluent_bit:
       name: "fluent-bit"
-      version: "1.8.12-780c4842"
+      version: "1.8.13-bdc43fc8"
       directory: "tpi"
     busybox:
       name: "busybox"
       version: "1.34.1"
-      #directory: "external" # I078212
+      directory: "external"
   highPriorityClassName: "kyma-system-priority"
   log:
     format: "json"

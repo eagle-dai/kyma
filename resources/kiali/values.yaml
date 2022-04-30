@@ -5,16 +5,16 @@ global:
       name: kyma-gateway
       namespace: kyma-system
   containerRegistry:
-    path: docker.io/eagledai # I078212
+    path: eu.gcr.io/kyma-project
   images:
     kiali:
       name: kiali
       version: 1.44.0-efa628c6
-      directory: "" # I078212
+      directory: tpi
     oauth2_proxy:
       name: oauth2-proxy
       version: 7.2.1-334ca95f
-      directory: "" # I078212
+      directory: tpi
   kymaRuntime:
     adminGroup: runtimeAdmin
     operatorGroup: runtimeOperator
@@ -42,6 +42,8 @@ authProxy:
     authLogging: true
     requestLogging: false
     passHostHeader: false
+    cookieExpire: 24h
+    cookieRefresh: 1h
   env: {}
   nodeSelector: {}
   securityContext:
@@ -102,7 +104,7 @@ deployment:
   hpa:
     api_version: "autoscaling/v2beta2"
     spec: {}
-  image_pull_policy: "IfNotPresent" #"Always" -- I078212
+  image_pull_policy: "Always"
   image_pull_secrets: []
   ingress:
     additional_labels: {}

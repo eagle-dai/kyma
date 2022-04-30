@@ -76,12 +76,12 @@ addons-ui:
 global:
   domainName: "kyma.example.com"
   containerRegistry:
-    path: docker.io/eagledai # I078212
+    path: eu.gcr.io/kyma-project
   # develop mode allows use insecure (http) url for addons configuration
   isDevelopMode: false
   # image pull policy for helm broker broker/controller containers
   image:
-    pullPolicy: IfNotPresent # Always -- I078212
+    pullPolicy: Always
   # etcd port uses by helm broker
   etcdClientPort: 2379
 
@@ -109,17 +109,17 @@ global:
   images:
     helm_broker_webhook:
       name: "helm-broker-webhook"
-      version: "49c6b00e"
+      version: "7e9eee5e"
     helm_broker:
       name: "helm-broker"
-      version: "49c6b00e"
+      version: "7e9eee5e"
     helm_controller:
       name: "helm-controller"
-      version: "7c8d1e85"
+      version: "7e9eee5e"
     etcd:
       name: "etcd"
-      version: "v3.3.25-699b7008"
-      # directory: "tpi/quay.io/coreos" # I078212
+      version: "v3.3.27-979d1ebd"
+      directory: "tpi/quay.io/coreos"
     add_ons_ui:
       name: "add-ons-ui"
       version: "c60a3c68"

@@ -36,7 +36,7 @@ spec:
           image: "{{ .Values.images.containerRegistry.path }}/binding:{{ .Values.images.bindingController.version }}"
           ports:
             - containerPort: {{ .Values.config.bindingController.port }}
-          imagePullPolicy: IfNotPresent #Always -- I078212
+          imagePullPolicy: Always
           volumeMounts:
           - name: webhook-cert
             mountPath: /var/run/webhook

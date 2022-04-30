@@ -89,6 +89,7 @@ func NewBEBPublisherDeployment(publisherConfig env.PublisherConfig) *appsv1.Depl
 					RestartPolicy:                 v1.RestartPolicyAlways,
 					ServiceAccountName:            publisherConfig.ServiceAccount,
 					TerminationGracePeriodSeconds: &TerminationGracePeriodSeconds,
+					PriorityClassName:             publisherConfig.PriorityClassName,
 				},
 			},
 		},
@@ -151,6 +152,7 @@ func NewNATSPublisherDeployment(publisherConfig env.PublisherConfig) *appsv1.Dep
 					RestartPolicy:                 v1.RestartPolicyAlways,
 					ServiceAccountName:            publisherConfig.ServiceAccount,
 					TerminationGracePeriodSeconds: &TerminationGracePeriodSeconds,
+					PriorityClassName:             publisherConfig.PriorityClassName,
 				},
 			},
 		},
@@ -180,7 +182,7 @@ func getSecurityContext() *v1.SecurityContext {
 
 func getReadinessProbe() *v1.Probe {
 	return &v1.Probe{
-		Handler: v1.Handler{
+		ProbeHandler: v1.ProbeHandler{
 			HTTPGet: &v1.HTTPGetAction{
 				Path:   "/readyz",
 				Port:   intstr.FromInt(8080),
@@ -193,7 +195,7 @@ func getReadinessProbe() *v1.Probe {
 
 func getLivenessProbe() *v1.Probe {
 	return &v1.Probe{
-		Handler: v1.Handler{
+		ProbeHandler: v1.ProbeHandler{
 			HTTPGet: &v1.HTTPGetAction{
 				Path:   "/healthz",
 				Port:   intstr.FromInt(8080),

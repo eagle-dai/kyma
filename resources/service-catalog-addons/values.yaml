@@ -4,7 +4,7 @@ service-catalog-ui:
 global:
   domainName: "kyma.example.com"
   containerRegistry:
-    path: docker.io/eagledai # I078212
+    path: eu.gcr.io/kyma-project
   images:
     service_binding_usage_controller:
       name: "service-binding-usage-controller"

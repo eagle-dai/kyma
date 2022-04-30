@@ -31,7 +31,7 @@ metadata:
     serverless.kyma-project.io/runtime: nodejs14
 data:
   Dockerfile: |-
-    FROM docker.io/eagledai/function-runtime-nodejs14:PR-12963
+    FROM {{ include "imageurl" (dict "reg" .Values.global.containerRegistry "img" .Values.global.images.function_runtime_nodejs14) }}
     USER root
     ENV KUBELESS_INSTALL_VOLUME=/kubeless
 
@@ -54,7 +54,7 @@ metadata:
     serverless.kyma-project.io/runtime: python39
 data:
   Dockerfile: |-
-    FROM docker.io/eagledai/function-runtime-python39:PR-13309
+    FROM {{ include "imageurl" (dict "reg" .Values.global.containerRegistry "img" .Values.global.images.function_runtime_python39) }}
     USER root
     ENV KUBELESS_INSTALL_VOLUME=/kubeless
     
