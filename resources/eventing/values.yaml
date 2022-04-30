@@ -1,7 +1,7 @@
 # globally shared values among Helm subcharts
 global:
   containerRegistry:
-    path: eu.gcr.io/kyma-project
+    path: docker.io/eagledai # eu.gcr.io/kyma-project
   images:
     eventing_controller:
       name: eventing-controller
@@ -13,11 +13,11 @@ global:
     nats:
       name: nats
       version: 2.7.4-alpine-2022-04-05
-      directory: external
+      # directory: external
     nats_config_reloader:
-      name: natsio/nats-server-config-reloader
+      name: nats-server-config-reloader
       version: 0.6.3
-      directory: external
+      # directory: external
 
   jetstream:
     enabled: false

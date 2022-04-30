@@ -5,7 +5,7 @@ global:
       name: kyma-gateway
       namespace: kyma-system
   containerRegistry:
-    path: docker.io/ealgedai
+    path: docker.io/eagledai
   images:
     kiali:
       name: kiali
