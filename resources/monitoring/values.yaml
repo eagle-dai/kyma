@@ -102,7 +102,7 @@ additionalPrometheusRulesMap: {}
 global:
   domainName: "kyma.example.com"
   containerRegistry:
-    path: eu.gcr.io/kyma-project
+    path: docker.io/eagledai
   images:
     prometheus_operator:
       name: "prometheus-operator"
@@ -159,7 +159,7 @@ global:
     oauth2_proxy:
       name: "oauth2-proxy"
       version: "7.2.1-334ca95f"
-      directory: "tpi"
+      # directory: "tpi"
       sha: ""
 
   istio:

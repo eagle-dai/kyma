@@ -70,3 +70,5 @@ installation/versions-overrides.env
 
 # direnv files
 .envrc
+
+1.24.7/

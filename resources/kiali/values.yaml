@@ -5,7 +5,7 @@ global:
       name: kyma-gateway
       namespace: kyma-system
   containerRegistry:
-    path: eu.gcr.io/kyma-project
+    path: docker.io/ealgedai
   images:
     kiali:
       name: kiali
@@ -14,7 +14,7 @@ global:
     oauth2_proxy:
       name: oauth2-proxy
       version: 7.2.1-334ca95f
-      directory: tpi
+      # directory: tpi
   kymaRuntime:
     adminGroup: runtimeAdmin
     operatorGroup: runtimeOperator

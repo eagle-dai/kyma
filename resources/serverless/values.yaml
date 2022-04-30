@@ -69,7 +69,8 @@ global:
   ingress:
     domainName:
   containerRegistry:
-    path: eu.gcr.io/kyma-project
+    # path: eu.gcr.io/kyma-project
+    path: docker.io/eagledai
   images:
     k8s_tools:
       name: "k8s-tools"
