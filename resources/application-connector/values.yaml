@@ -35,7 +35,7 @@ global:
       nameMtls: kyma-gateway-application-connector
       namespace: kyma-system
   containerRegistry:
-    path: docker.id/eagledai #eu.gcr.io/kyma-project
+    path: docker.io/eagledai #eu.gcr.io/kyma-project
   images:
     application_broker:
       name: "application-broker"

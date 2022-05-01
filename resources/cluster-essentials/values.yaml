@@ -16,7 +16,7 @@ global:
     k8s_tools:
       name: "k8s-tools"
       version: "20220331-9c1578c1"
-      directory: "tpi"
+      # directory: "tpi"
     podpreset_webhook:
       name: "podpreset-webhook"
       version: "663a99a3"

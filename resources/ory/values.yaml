@@ -32,7 +32,7 @@ global:
     k8s_tools:
       name: "k8s-tools"
       version: "20220331-9c1578c1"
-      directory: "tpi"
+      # directory: "tpi"
     ## Google Cloud SQL Proxy image
     ## ref: https://cloud.google.com/sql/docs/mysql/sql-proxy
     ## ref: https://cloud.google.com/sql/docs/postgres/sql-proxy
@@ -43,7 +43,7 @@ global:
     hydra:
       name: "hydra"
       version: "v1.10.7-sqlite"
-      directory: "external/oryd"
+      # directory: "external/oryd"
     hydra_maester:
       name: "hydra-maester"
       version: "v0.0.24"
@@ -55,11 +55,11 @@ global:
     oathkeeper:
       name: "oathkeeper"
       version: "v0.38.15-alpine"
-      directory: "external/oryd"
+      # directory: "external/oryd"
     oathkeeper_maester:
       name: "oathkeeper-maester"
       version: "v0.1.5"
-      directory: "external/oryd"
+      # directory: "external/oryd"
     postgres:
       name: "postgres"
       version: "11.14-alpine3.15"
