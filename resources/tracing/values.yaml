@@ -104,20 +104,21 @@ global:
   tracing:
     enabled: true
   containerRegistry:
-    path: eu.gcr.io/kyma-project
+    # path: eu.gcr.io/kyma-project
+    path: docker.io/eagledai
   images:
     jaeger_operator:
       name: "jaeger-operator"
       version: "1.30.0-bc31ec4c"
-      directory: "tpi"
+      # directory: "tpi"
     jaeger_all_in_one:
-      name: "jaegertracing/all-in-one"
+      name: "jaegertracing_all-in-one"
       version: "1.30.0"
-      directory: "external"
+      # directory: "external"
     oauth2_proxy:
       name: "oauth2-proxy"
       version: "7.2.1-334ca95f"
-      directory: "tpi"
+      # directory: "tpi"
 virtualservice:
   enabled: true
 authProxy:

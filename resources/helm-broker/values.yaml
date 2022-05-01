@@ -76,7 +76,8 @@ addons-ui:
 global:
   domainName: "kyma.example.com"
   containerRegistry:
-    path: eu.gcr.io/kyma-project
+    # path: eu.gcr.io/kyma-project
+    path: docker.io/eagledai
   # develop mode allows use insecure (http) url for addons configuration
   isDevelopMode: false
   # image pull policy for helm broker broker/controller containers
@@ -119,7 +120,7 @@ global:
     etcd:
       name: "etcd"
       version: "v3.3.27-979d1ebd"
-      directory: "tpi/quay.io/coreos"
+      # directory: "tpi/quay.io/coreos"
     add_ons_ui:
       name: "add-ons-ui"
       version: "c60a3c68"

@@ -106,9 +106,9 @@ tests:
 global:
   domainName: kyma.example.com
   containerRegistry:
-    path: eu.gcr.io/kyma-project
+    path: docker.io/eagledai # eu.gcr.io/kyma-project
   images:
     api_gateway_controller:
       name: "api-gateway-controller"
       version: "9fd030a8"
-      directory: "incubator"
+      # directory: "incubator"
